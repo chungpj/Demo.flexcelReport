@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31624.102
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlexcelReport", "FlexcelReport\FlexcelReport.csproj", "{F4F9A1BD-569E-487A-A977-331EF924AB5D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Demo.UI", "Demo.UI\Demo.UI.csproj", "{96A1DD75-239B-4512-BD43-67D8D366168F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F4F9A1BD-569E-487A-A977-331EF924AB5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F4F9A1BD-569E-487A-A977-331EF924AB5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F4F9A1BD-569E-487A-A977-331EF924AB5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F4F9A1BD-569E-487A-A977-331EF924AB5D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{96A1DD75-239B-4512-BD43-67D8D366168F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{96A1DD75-239B-4512-BD43-67D8D366168F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{96A1DD75-239B-4512-BD43-67D8D366168F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{96A1DD75-239B-4512-BD43-67D8D366168F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {44FACA39-1400-4EDC-B81A-7DE9A548B690}
+	EndGlobalSection
+EndGlobal

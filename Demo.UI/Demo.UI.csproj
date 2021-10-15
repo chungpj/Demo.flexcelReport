@@ -1,0 +1,339 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{96A1DD75-239B-4512-BD43-67D8D366168F}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Demo.UI</RootNamespace>
+    <AssemblyName>Demo.UI</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44306</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FlexCel">
+      <HintPath>..\dll\FlexCel.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>..\packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>..\packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>..\packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\ReportController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Manager\DataServicesLocator.cs" />
+    <Compile Include="Manager\FileManager.cs" />
+    <Compile Include="Models\Class\ClassModel.cs" />
+    <Compile Include="Models\Report\FilterModelBase.cs" />
+    <Compile Include="Models\Student\StudentModel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Manager\ReportManager.cs" />
+    <Compile Include="Reports\Student\Report_StudentList.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="pdfjs\build\pdf.js" />
+    <Content Include="pdfjs\build\pdf.worker.js" />
+    <Content Include="pdfjs\debugger.js" />
+    <Content Include="pdfjs\images\annotation-check.svg" />
+    <Content Include="pdfjs\images\annotation-comment.svg" />
+    <Content Include="pdfjs\images\annotation-help.svg" />
+    <Content Include="pdfjs\images\annotation-insert.svg" />
+    <Content Include="pdfjs\images\annotation-key.svg" />
+    <Content Include="pdfjs\images\annotation-newparagraph.svg" />
+    <Content Include="pdfjs\images\annotation-noicon.svg" />
+    <Content Include="pdfjs\images\annotation-note.svg" />
+    <Content Include="pdfjs\images\annotation-paragraph.svg" />
+    <Content Include="pdfjs\images\findbarButton-next%402x.png" />
+    <Content Include="pdfjs\images\findbarButton-next-rtl%402x.png" />
+    <Content Include="pdfjs\images\findbarButton-next-rtl.png" />
+    <Content Include="pdfjs\images\findbarButton-next.png" />
+    <Content Include="pdfjs\images\findbarButton-previous%402x.png" />
+    <Content Include="pdfjs\images\findbarButton-previous-rtl%402x.png" />
+    <Content Include="pdfjs\images\findbarButton-previous-rtl.png" />
+    <Content Include="pdfjs\images\findbarButton-previous.png" />
+    <Content Include="pdfjs\images\grab.cur" />
+    <Content Include="pdfjs\images\grabbing.cur" />
+    <Content Include="pdfjs\images\loading-icon.gif" />
+    <Content Include="pdfjs\images\loading-small%402x.png" />
+    <Content Include="pdfjs\images\loading-small.png" />
+    <Content Include="pdfjs\images\secondaryToolbarButton-documentProperties%402x.png" />
+    <Content Include="pdfjs\images\secondaryToolbarButton-documentProperties.png" />
+    <Content Include="pdfjs\images\secondaryToolbarButton-firstPage%402x.png" />
+    <Content Include="pdfjs\images\secondaryToolbarButton-firstPage.png" />
+    <Content Include="pdfjs\images\secondaryToolbarButton-handTool%402x.png" />
+    <Content Include="pdfjs\images\secondaryToolbarButton-handTool.png" />
+    <Content Include="pdfjs\images\secondaryToolbarButton-lastPage%402x.png" />
+    <Content Include="pdfjs\images\secondaryToolbarButton-lastPage.png" />
+    <Content Include="pdfjs\images\secondaryToolbarButton-rotateCcw%402x.png" />
+    <Content Include="pdfjs\images\secondaryToolbarButton-rotateCcw.png" />
+    <Content Include="pdfjs\images\secondaryToolbarButton-rotateCw%402x.png" />
+    <Content Include="pdfjs\images\secondaryToolbarButton-rotateCw.png" />
+    <Content Include="pdfjs\images\secondaryToolbarButton-selectTool%402x.png" />
+    <Content Include="pdfjs\images\secondaryToolbarButton-selectTool.png" />
+    <Content Include="pdfjs\images\shadow.png" />
+    <Content Include="pdfjs\images\texture.png" />
+    <Content Include="pdfjs\images\toolbarButton-bookmark%402x.png" />
+    <Content Include="pdfjs\images\toolbarButton-bookmark.png" />
+    <Content Include="pdfjs\images\toolbarButton-download%402x.png" />
+    <Content Include="pdfjs\images\toolbarButton-download.png" />
+    <Content Include="pdfjs\images\toolbarButton-menuArrows%402x.png" />
+    <Content Include="pdfjs\images\toolbarButton-menuArrows.png" />
+    <Content Include="pdfjs\images\toolbarButton-openFile%402x.png" />
+    <Content Include="pdfjs\images\toolbarButton-openFile.png" />
+    <Content Include="pdfjs\images\toolbarButton-pageDown%402x.png" />
+    <Content Include="pdfjs\images\toolbarButton-pageDown-rtl%402x.png" />
+    <Content Include="pdfjs\images\toolbarButton-pageDown-rtl.png" />
+    <Content Include="pdfjs\images\toolbarButton-pageDown.png" />
+    <Content Include="pdfjs\images\toolbarButton-pageUp%402x.png" />
+    <Content Include="pdfjs\images\toolbarButton-pageUp-rtl%402x.png" />
+    <Content Include="pdfjs\images\toolbarButton-pageUp-rtl.png" />
+    <Content Include="pdfjs\images\toolbarButton-pageUp.png" />
+    <Content Include="pdfjs\images\toolbarButton-presentationMode%402x.png" />
+    <Content Include="pdfjs\images\toolbarButton-presentationMode.png" />
+    <Content Include="pdfjs\images\toolbarButton-print%402x.png" />
+    <Content Include="pdfjs\images\toolbarButton-print.png" />
+    <Content Include="pdfjs\images\toolbarButton-search%402x.png" />
+    <Content Include="pdfjs\images\toolbarButton-search.png" />
+    <Content Include="pdfjs\images\toolbarButton-secondaryToolbarToggle%402x.png" />
+    <Content Include="pdfjs\images\toolbarButton-secondaryToolbarToggle-rtl%402x.png" />
+    <Content Include="pdfjs\images\toolbarButton-secondaryToolbarToggle-rtl.png" />
+    <Content Include="pdfjs\images\toolbarButton-secondaryToolbarToggle.png" />
+    <Content Include="pdfjs\images\toolbarButton-sidebarToggle%402x.png" />
+    <Content Include="pdfjs\images\toolbarButton-sidebarToggle-rtl%402x.png" />
+    <Content Include="pdfjs\images\toolbarButton-sidebarToggle-rtl.png" />
+    <Content Include="pdfjs\images\toolbarButton-sidebarToggle.png" />
+    <Content Include="pdfjs\images\toolbarButton-viewAttachments%402x.png" />
+    <Content Include="pdfjs\images\toolbarButton-viewAttachments.png" />
+    <Content Include="pdfjs\images\toolbarButton-viewOutline%402x.png" />
+    <Content Include="pdfjs\images\toolbarButton-viewOutline-rtl%402x.png" />
+    <Content Include="pdfjs\images\toolbarButton-viewOutline-rtl.png" />
+    <Content Include="pdfjs\images\toolbarButton-viewOutline.png" />
+    <Content Include="pdfjs\images\toolbarButton-viewThumbnail%402x.png" />
+    <Content Include="pdfjs\images\toolbarButton-viewThumbnail.png" />
+    <Content Include="pdfjs\images\toolbarButton-zoomIn%402x.png" />
+    <Content Include="pdfjs\images\toolbarButton-zoomIn.png" />
+    <Content Include="pdfjs\images\toolbarButton-zoomOut%402x.png" />
+    <Content Include="pdfjs\images\toolbarButton-zoomOut.png" />
+    <Content Include="pdfjs\images\treeitem-collapsed%402x.png" />
+    <Content Include="pdfjs\images\treeitem-collapsed-rtl%402x.png" />
+    <Content Include="pdfjs\images\treeitem-collapsed-rtl.png" />
+    <Content Include="pdfjs\images\treeitem-collapsed.png" />
+    <Content Include="pdfjs\images\treeitem-expanded%402x.png" />
+    <Content Include="pdfjs\images\treeitem-expanded.png" />
+    <Content Include="pdfjs\viewer.css" />
+    <Content Include="pdfjs\viewer.html" />
+    <Content Include="pdfjs\viewer.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="App_Data\Template\Student_ListStudentGroupByClass.xlsx" />
+    <Content Include="pdfjs\build\pdf.js.map" />
+    <Content Include="pdfjs\build\pdf.worker.js.map" />
+    <Content Include="pdfjs\locale\en-US\viewer.properties" />
+    <Content Include="pdfjs\locale\locale.properties" />
+    <Content Include="pdfjs\locale\vi\viewer.properties" />
+    <Content Include="pdfjs\viewer.js.map" />
+    <Content Include="pdfjs\web.config" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Views\Report\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FlexcelReport\FlexcelReport.csproj">
+      <Project>{f4f9a1bd-569e-487a-a977-331ef924ab5d}</Project>
+      <Name>FlexcelReport</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52033</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44306/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>
