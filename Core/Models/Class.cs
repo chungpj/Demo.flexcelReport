@@ -1,6 +1,6 @@
-﻿namespace Demo.UI.Models.Class
+﻿namespace Core.Models
 {
-    public class ClassModel
+    public class Class
     {
         public int Id { get; set; }
         public string ShortName { get; set; }

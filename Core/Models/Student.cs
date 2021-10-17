@@ -1,6 +1,6 @@
-﻿namespace Demo.UI.Models.Student
+﻿namespace Core.Models
 {
-    public class StudentModel
+    public class Student
     {
         public int Id { get; set; }
         public string Code { get; set; }
@@ -13,12 +13,22 @@
 
         public int Average
         {
-            get {
+            get
+            {
                 var math = Math ?? 0;
                 var literature = Literature ?? 0;
                 return (math + literature) / 2;
             }
         }
+        private Class _class;
 
+        public Class Class
+        {
+            get { return _class; }
+            set { 
+                _class = value;
+                Class_Id = _class.Id;
+            }
+        }
     }
 }

@@ -28,8 +28,19 @@ Rebuild and Run project Demo.UI
 ---
 ```
 
-## See Demo:
+## Config Demo:
 ![config_table_data](/config_table_data.png)
+
 ![config_relationship](/config_relationship.png)
+
 ![config_formulas](/config_formulas.png)
+
+![code_config_table_data](/code_config_table_data.png)
+## See Demo Result:
+![parent_data](/parent.png)
+
+![childs_data](/childs.png)
+
 ![demo](/demo.png)
+
+![print](/print.png)

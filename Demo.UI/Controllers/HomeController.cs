@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Core.Services.Student;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,6 +9,11 @@ namespace Demo.UI.Controllers
 {
     public class HomeController : Controller
     {
+        private readonly IStudentService _studentService;
+        public HomeController(IStudentService studentService)
+        {
+            _studentService = studentService;
+        }
         public ActionResult Index()
         {
             return View();

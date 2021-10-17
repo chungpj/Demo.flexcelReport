@@ -1,16 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using FlexCelReport;
 using Demo.UI.Manger;
 using Demo.UI.Models.Report;
 
 using Report.Metadata;
+using Core.Services;
+using Core.Services.Student;
 
 namespace Demo.UI.Reports.Student
 {
-    using Demo.UI.Models.Class;
-    using Demo.UI.Models.Student;
     using FlexCel.Report;
 
     [ExcelReport(ReportName = "Student_ListStudentGroupByClass"
@@ -27,13 +25,14 @@ namespace Demo.UI.Reports.Student
 
         protected override bool OnLoad(FlexCelReport flexcelReport, T filter)
         {
-            var classModels = this.InitClassData();
-            var studentModels = this.InitStudentData(classModels);
-
-            var classData = classModels.Select((c, index) => new {  No = SpecialCharacter[index],
-                                                                    Name = "Lớp " + c.Name,
-                                                                    c.Id
-                                                                });
+            var studentModels = (filter._currentService as IStudentService).GetAll();
+            var classData = studentModels.Select(s => s.Class).Distinct()
+                                                                .ToList()
+                                                                .Select((c, index) => new {  
+                                                                                            No = SpecialCharacter[index],
+                                                                                            Name = "Lớp " + c.Name,
+                                                                                            c.Id
+                                                                                        }).OrderBy(c => c.Id).ToList();
             flexcelReport.AddTable("Class", classData);
             var studentData = studentModels.Select((c, index) => new {
                                                                         No = index,
@@ -55,45 +54,13 @@ namespace Demo.UI.Reports.Student
             return true;
         }
 
-        private List<ClassModel> InitClassData()
-        {
-            return new List<ClassModel>
-            {
-                new ClassModel {Id=11,Name = "5A"},
-                new ClassModel {Id=12,Name = "5B"},
-                new ClassModel {Id=13,Name = "5C"},
-                new ClassModel {Id=14,Name = "5D"},
-            };
-        }
-
-        private List<StudentModel> InitStudentData(List<ClassModel> classModels)
-        {
-            var rs = new List<StudentModel>();
-            var rand = new Random();
-            foreach (var  classModel in classModels)
-            {
-                for (int i = 1; i <= rand.Next(3, 10); i++)
-                {
-                    rs.Add(new StudentModel
-                    {
-                        Id = i,
-                        Class_Id = classModel.Id,
-                        Name = "Student " + i,
-                        Math = rand.Next(0,10),
-                        Literature = rand.Next(0, 10)
-                    });
-                }
-            }
-            return rs;
-        }
-
         public string[] SpecialCharacter = { "I", "II","III","IV","V","VI","VII","VIII","IX","X","XI","XII","XIII","XIV","XV" };
     }
 
     public class ReportFilter_StudentList : FilterModelBase
     {
-        public ReportFilter_StudentList()
-            : base()
+        public ReportFilter_StudentList(IBaseService currentService)
+            : base(currentService)
         {
         }
     }
